@@ -30,6 +30,19 @@ $result = $conn->query($sql);
         </header>
 
         <main>
+            <?php if (
+                isset($_SESSION["loggedin"]) &&
+                $_SESSION["loggedin"] === true
+            ): ?>
+                <section class="post-form">
+                    <h2>Đăng bài mới</h2>
+                    <form action="post.php" method="post">
+                        <textarea name="content" placeholder="Nhập nội dung bài viết..." required></textarea>
+                        <button type="submit" class="btn btn-submit">Đăng Bài</button>
+                    </form>
+                </section>
+            <?php endif; ?>
+
             <section class="posts-list">
                 <h2>Bài Đăng Gần Đây</h2>
                 <?php if ($result && $result->num_rows > 0): ?>

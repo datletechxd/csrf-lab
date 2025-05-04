@@ -30,7 +30,7 @@ $result = $conn->query($sql);
         </header>
 
         <main>
-        <section class="posts-list">
+            <section class="posts-list">
                 <h2>Bài Đăng Gần Đây</h2>
                 <?php if ($result && $result->num_rows > 0): ?>
                     <?php while ($row = $result->fetch_assoc()): ?>

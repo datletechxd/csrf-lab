@@ -1,3 +1,14 @@
+<?php
+session_start();
+include "db_config.php";
+
+$sql = "SELECT posts.content, posts.post_date, users.username 
+        FROM posts 
+        INNER JOIN users ON posts.user_id = users.id 
+        ORDER BY posts.post_date DESC";
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>

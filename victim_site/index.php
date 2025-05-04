@@ -23,8 +23,18 @@ $result = $conn->query($sql);
             <div class="site-header">
                 <h1>Mạng Xã Hội Demo</h1>
                 <div class="user-actions">
-                    <a href="login.php" class="btn btn-login">Đăng Nhập</a>
-                    <a href="register.php" class="btn btn-register">Đăng Ký</a>
+                    <?php if (
+                        isset($_SESSION["loggedin"]) &&
+                        $_SESSION["loggedin"] === true
+                    ): ?>
+                        <span class="welcome">Xin chào, <?php echo htmlspecialchars(
+                            $_SESSION["username"]
+                        ); ?></span>
+                        <a href="logout.php" class="btn btn-logout">Đăng Xuất</a>
+                    <?php else: ?>
+                        <a href="login.php" class="btn btn-login">Đăng Nhập</a>
+                        <a href="register.php" class="btn btn-register">Đăng Ký</a>
+                    <?php endif; ?>
                 </div>
             </div>
         </header>

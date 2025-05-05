@@ -38,9 +38,17 @@ header h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.attack-box-secure {
+  border-color: #27ae60;
+}
+
 .attack-box h2 {
   color: #c0392b;
   margin-bottom: 15px;
+}
+
+.attack-box-secure h2 {
+  color: #27ae60;
 }
 
 .attack-box ol {
@@ -63,8 +71,16 @@ header h1 {
   transition: background-color 0.3s;
 }
 
+.btn-attack-secure {
+  background-color: #27ae60;
+}
+
 .btn-attack:hover {
   background-color: #a93226;
+}
+
+.btn-attack-secure:hover {
+  background-color: #2ecc71;
 }
 
 .attack-result {

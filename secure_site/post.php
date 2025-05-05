@@ -25,6 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $param_content = trim($_POST["content"]);
             
             if($stmt->execute()){
+                $_SESSION["csrf_token"] = bin2hex(random_bytes(32));
                 header("location: index.php");
                 exit;
             } else{

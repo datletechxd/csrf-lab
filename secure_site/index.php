@@ -51,6 +51,7 @@ $result = $conn->query($sql);
                 <section class="post-form">
                     <h2>Đăng bài mới</h2>
                     <form action="post.php" method="post">
+                        <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
                         <textarea name="content" placeholder="Nhập nội dung bài viết..." required></textarea>
                         <button type="submit" class="btn btn-submit">Đăng Bài</button>
                     </form>

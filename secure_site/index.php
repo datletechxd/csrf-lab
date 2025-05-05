@@ -1,6 +1,10 @@
 <?php
 session_start();
 include "db_config.php";
+ 
+if (!isset($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
 
 $sql = "SELECT posts.content, posts.post_date, users.username 
         FROM posts 

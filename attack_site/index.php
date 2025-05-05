@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Tấn Công CSRF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Demo Tấn Công CSRF</h1>
+            <p>Trang web này mô phỏng tấn công CSRF vào các trang web</p>
+        </header>
+
+        <main>
+            <div class="attack-box">
+                <h2>Tấn công CSRF - Trang Web Dễ Bị Tổn Thương</h2>
+                <p>Khi bạn nhấn nút bên dưới, trang web này sẽ:</p>
+                <ol>
+                    <li>Đọc cookie từ trang web đích (nếu người dùng đã đăng nhập)</li>
+                    <li>Tự động gửi yêu cầu tạo bài đăng mới với nội dung "Tôi bị ngu" mà không cần sự cho phép của người dùng</li>
+                </ol>
+                
+                <button id="attack-button" class="btn-attack">Tấn Công CSRF - Trang Dễ Bị Tổn Thương</button>
+                
+                <div id="attack-result" class="attack-result"></div>
+            </div>
+
+            <div class="explanation">
+                <h2>Giải thích về lỗ hổng CSRF</h2>
+                <p>Tấn công Cross-Site Request Forgery (CSRF) là khi một trang web độc hại lừa trình duyệt của người dùng gửi yêu cầu đến một trang web khác mà người dùng đã đăng nhập.</p>
+                <p>So sánh giữa trang web không bảo mật và trang web có bảo mật CSRF sẽ giúp bạn hiểu rõ hơn về cách phòng chống.</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Demo CSRF Attack - Bảo mật web và ứng dụng</p>
+        </footer>
+    </div>
+</body>
+</html>

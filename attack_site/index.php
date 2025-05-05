@@ -27,6 +27,19 @@
                 <div id="attack-result" class="attack-result"></div>
             </div>
 
+            <div class="attack-box attack-box-secure">
+                <h2>Tấn Công CSRF - Trang Web Bảo Mật</h2>
+                <p>Khi bạn nhấn nút bên dưới, trang web này sẽ:</p>
+                <ol>
+                    <li>Thử gửi yêu cầu tạo bài đăng mới tới trang web có bảo mật CSRF</li>
+                    <li>Xem liệu việc thêm token CSRF có ngăn chặn được tấn công hay không</li>
+                </ol>
+                
+                <button id="attack-secure-button" class="btn-attack btn-attack-secure">Tấn Công CSRF - Trang Bảo Mật</button>
+                
+                <div id="attack-secure-result" class="attack-result"></div>
+            </div>
+
             <div class="explanation">
                 <h2>Giải thích về lỗ hổng CSRF</h2>
                 <p>Tấn công Cross-Site Request Forgery (CSRF) là khi một trang web độc hại lừa trình duyệt của người dùng gửi yêu cầu đến một trang web khác mà người dùng đã đăng nhập.</p>

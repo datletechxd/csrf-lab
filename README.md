@@ -20,3 +20,9 @@ This is a demo about Cross-Site Request Forgery (CSRF) attacks.
     ```
     http://localhost:<port>/csrf-lab/
     ```
+
+## Structure CSRF Lab
+
+- **attack_site (Attacker)**: This version is tasked with attacking site defenses to test CSRF.
+- **victim_site (Vulnerable)**: This version does not have CSRF protection, making it possible to execute unauthorized requests using a crafted attack page.
+- **secure_site (Secured)**: This version includes CSRF protection by implementing CSRF tokens.

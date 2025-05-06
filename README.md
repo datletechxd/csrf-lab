@@ -18,5 +18,5 @@ This is a demo about Cross-Site Request Forgery (CSRF) attacks.
     ```
 4.  **Access the web application**: Open a browser and visit:
     ```
-    http://localhost/csrf-lab/
+    http://localhost:<port>/csrf-lab/
     ```
